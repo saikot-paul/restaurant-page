@@ -1,3 +1,4 @@
-import loadPage from "./load.js";
+import { PageLoader } from "./pageLoader.js";
 
-loadPage()
+const pageLoader = new PageLoader()
+pageLoader.loadPage()
