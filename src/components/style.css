@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body { 
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Roboto';
+    background-color: black;
+    color: white;
+}
+
+#content { 
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.header { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.5rem;
+    padding: 1.25rem;
+}
+
+.main-content { 
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 1.5rem;
+}
+
+.grid-container { 
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+}
+
+.home-container { 
+    flex: 1;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: 0.5fr 2fr;
+    padding-left: 20vw;
+    padding-right: 20vw;
+    font-size: 1.25rem;
+    row-gap: 0.0125em;
+    padding-top: 1.5em;
+}
+
+.menu-container { 
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    padding-left: 20vw;
+    padding-right: 20vw;
+    gap: 1em;
+}
+
+
+.contact-container { 
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    width: 65vw;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+.contact-container div { 
+    margin-bottom: 0.5em;
+}
+
+.map-style { 
+    flex:1; 
+    height: 80%;
+}
+
+.contact-data-container { 
+    font-size: 1.5rem;
+}
+
+.menu-item { 
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 0.5px solid white;
+    padding: 1.5rem;
+}
+
+.description { 
+    text-align: center;
+}
+
+.title { 
+    text-align: center;
+    font-size: 1.75rem;
+}
+
+button { 
+    all: unset;
+}
+
+.left, .right { 
+    padding: 0.25rem;
+}
+
+.menu-container .menu-item img { 
+    width: 75%;
+    height: 75%;
+}
+
+.menu-item-title { 
+    font-weight: bold;
+    font-size: 1.5em;
+    margin-top: 0.4em;
+    margin-bottom: 0.4em;
+}

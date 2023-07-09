@@ -1,0 +1,8 @@
+{ 
+    "title": "Contact Info for restaurant", 
+    "contact": { 
+        "Name" : "John Doe", 
+        "Email": "totally_real_email@email.com", 
+        "Number": "012-345-6789"
+    }
+}
