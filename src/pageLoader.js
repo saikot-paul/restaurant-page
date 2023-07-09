@@ -25,7 +25,7 @@ class PageLoader {
         ids.forEach( (element, index) => { 
             const btn = this.createDOMElement('button', null, {
                 textContent: text[index], 
-                onclick: this.createSection(text[index], functions[index])
+                eventListener: {eventType: 'click', func: functions[index], title: text[index]}
             })
             const div = this.createDOMElement('div', '${element}-btn-container', null, btn)
             
@@ -45,7 +45,7 @@ class PageLoader {
 
     }
 
-    createSection(titleText) {
+    createSection(titleText, contentFunc) {
         
         document.getElementById('title').textContent = titleText;
 
@@ -104,6 +104,8 @@ class PageLoader {
         const imgDesc = ['Avocado Toast', 'Hyderbadi Biryani', 'Chicken Burger', 'Omelette du Fromage'];
 
         images.forEach( (source, index) => { 
+
+            const div = this.createDOMElement('div', 'menu-item')
             const img = new Image()
             img.src = source
             img.alt = imgDesc[index]
@@ -133,12 +135,12 @@ class PageLoader {
         
         for (let property in contactData) { 
             const value = contactData[property]
-            const temp = this.createDOMElement('div', null, {textContent: '${property}: ${value}'})
+            const temp = this.createDOMElement('div', null, {textContent: `${property}: ${value}`})
             
-            contactData.appendChild(temp)
+            contactDataContainer.appendChild(temp)
         }
 
-        contactContainer.appendChild(contactData)
+        contactContainer.appendChild(contactDataContainer)
         contactContainer.appendChild(map)
 
         return contactContainer
@@ -154,7 +156,15 @@ class PageLoader {
 
         if (attributes) { 
             for (let attr in attributes) { 
-                element[attr] = attributes[attr]
+                
+                if (attr === 'eventListener'){ 
+                    const {eventType, func, title} = attributes[attr]
+                    element.addEventListener(eventType, ()=> { 
+                        this.createSection(title, func)
+                    })
+                }else{
+                    element[attr] = attributes[attr]
+                }
             }
         }
 

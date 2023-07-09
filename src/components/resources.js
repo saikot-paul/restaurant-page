@@ -2,7 +2,7 @@ import avocadoToast from './images/avocado_toast.png'
 import burger from './images/burger.png'
 import biryani from './images/biryani.png'
 import omelette from './images/omelette.png'
-import contact_info from './data/contact_info.json'
+import contact_info from './data/contact_info.json5'
 
 export const images = [avocadoToast, burger, biryani, omelette]
 export const contactData = contact_info.contact
