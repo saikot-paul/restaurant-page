@@ -5,3 +5,5 @@ The webpage created uses webpack to bundle the javascript files and dynamically 
 
 Below is a live demonstration of the website. 
 
+https://github.com/saikot-paul/restaurant-page/assets/79386282/f5b4c3b1-95a1-40cb-b0e2-33d8dd469537
+
