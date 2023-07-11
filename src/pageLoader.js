@@ -18,7 +18,7 @@ class PageLoader {
 
     createHeader() { 
         const ids = ['home', 'menu', 'contact']
-        const text = ['Home', 'Menu', 'Contact']
+        const text = ['About', 'Menu', 'Contact']
         const functions = [this.homeHelperFunc, this.menuHelperFunc, this.contactHelperFunc]
 
         const header = this.createDOMElement('div', 'header')
