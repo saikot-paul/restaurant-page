@@ -110,7 +110,7 @@ class PageLoader {
             img.src = source
             img.alt = imgDesc[index]
 
-            const itemTitle = this.createDOMElement('div', 'menu-item-title')
+            const itemTitle = this.createDOMElement('div', 'menu-item-title', {textContent: imgDesc[index]})
             const descDiv = this.createDOMElement('div', 'description', {textContent: shortWordVomit})
         
             div.appendChild(img)
